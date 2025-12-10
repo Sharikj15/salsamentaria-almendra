@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #8B0000;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700;
+}
+
+.hero {
+    background: linear-gradient(135deg, #8B0000 0%, #C41E3A 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    background-color: #FFD700;
+    color: #8B0000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #FFC700;
+}
+
+.productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.productos h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #8B0000;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: #8B0000;
+}
+
+.img-producto {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.precio {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+.contacto {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #8B0000;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #8B0000;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .productos h2,
+    .contacto h2 {
+        font-size: 28px;
+    }
+}
+
+/* Estilos para imágenes de productos y modal (usados en /productos y en la página principal) */
+.img-producto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-beneficios {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    align-self: center;
+    width: 100%;
+}
+
+.btn-beneficios:hover {
+    background-color: #A52A2A;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.activo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #8B0000;
+}
+
+#modal-titulo {
+    color: #8B0000;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+.modal-beneficios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.beneficio-item {
+    background-color: #f5f5f5;
+    padding: 12px;
+    border-left: 4px solid #8B0000;
+    border-radius: 3px;
+}
+
+.beneficio-item strong {
+    color: #8B0000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.beneficio-item p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 10000;
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+    fill: #ffffff;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float { right: 14px; bottom: 14px; width:50px; height:50px; }
+    .whatsapp-float svg { width:24px; height:24px; }
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    right: 20px;
+    bottom: 90px; /* arriba del botón WhatsApp */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 11000;
+}
+
+.toast {
+    min-width: 240px;
+    max-width: 320px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: toast-in 300ms forwards;
+}
+
+.toast.success { background: linear-gradient(90deg,#2ecc71,#27ae60); }
+.toast.info { background: linear-gradient(90deg,#34495e,#2c3e50); }
+.toast.error { background: linear-gradient(90deg,#e74c3c,#c0392b); }
+
+@keyframes toast-in {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes toast-out {
+    to { opacity: 0; transform: translateY(12px); }
+}

@@ -1,0 +1,237 @@
+.productos-header {
+    background: linear-gradient(135deg, #8B0000 0%, #C41E3A 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.productos-header h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.productos-header p {
+    font-size: 18px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-filtro {
+    padding: 10px 20px;
+    border: 2px solid #8B0000;
+    background-color: white;
+    color: #8B0000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.btn-filtro:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-filtro.activo {
+    background-color: #8B0000;
+    color: white;
+}
+
+.productos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+.producto-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.15);
+    border-color: #8B0000;
+}
+
+.producto-card .img-producto {
+    font-size: 70px;
+}
+
+.img-producto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.producto-card h3 {
+    color: #8B0000;
+    font-size: 18px;
+    margin: 0;
+}
+
+.producto-card .descripcion {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.producto-card .precio {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+.btn-agregar {
+    background-color: #FFD700;
+    color: #8B0000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    align-self: center;
+    width: 100%;
+}
+
+.btn-agregar:hover {
+    background-color: #FFC700;
+}
+
+.btn-beneficios {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    align-self: center;
+    width: 100%;
+}
+
+.btn-beneficios:hover {
+    background-color: #A52A2A;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.activo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #8B0000;
+}
+
+#modal-titulo {
+    color: #8B0000;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+.modal-beneficios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.beneficio-item {
+    background-color: #f5f5f5;
+    padding: 12px;
+    border-left: 4px solid #8B0000;
+    border-radius: 3px;
+}
+
+.beneficio-item strong {
+    color: #8B0000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.beneficio-item p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.producto-card.oculto {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .productos-header h1 {
+        font-size: 32px;
+    }
+
+    .productos-lista {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .filtros {
+        gap: 10px;
+    }
+
+    .btn-filtro {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}

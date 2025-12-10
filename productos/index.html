@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Salsamentería Almendra</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Salsamentería Almendra</div>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="index.html">Productos</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="productos-header">
+        <h1>Catálogo de Productos</h1>
+        <p>Explora nuestra completa selección de carnes y productos frescos</p>
+    </section>
+
+    <div class="filtros">
+        <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+        <button class="btn-filtro" data-filtro="carnes">Carnes</button>
+        <button class="btn-filtro" data-filtro="embutidos">Embutidos</button>
+        <button class="btn-filtro" data-filtro="huevos">Huevos</button>
+    </div>
+
+    <section class="productos-lista">
+        <div class="producto-card" data-categoria="carnes">
+            <img src="../images/cerdo-lomo.jpg" alt="Carne de Cerdo - Lomo" class="img-producto-img">
+            <h3>Carne de Cerdo - Lomo</h3>
+            <p class="descripcion">Corte de lomo fresco y tierno</p>
+            <span class="precio">$8.50/kg</span>
+            <button class="btn-beneficios" data-producto="Carne de Cerdo - Lomo">Ver Beneficios</button>
+        </div>
+
+        <div class="producto-card" data-categoria="carnes">
+            <img src="../images/cerdo-costilla.jpg" alt="Carne de Cerdo - Costilla" class="img-producto-img">
+            <h3>Carne de Cerdo - Costilla</h3>
+            <p class="descripcion">Costillas frescas perfectas para asar</p>
+            <span class="precio">$7.20/kg</span>
+            <button class="btn-beneficios" data-producto="Carne de Cerdo - Costilla">Ver Beneficios</button>
+        </div>
+
+        <div class="producto-card" data-categoria="carnes">
+            <img src="../images/carne_res.jpg" alt="Carne - Res" class="img-producto-img">
+            <h3>Carne - Res</h3>
+            <p class="descripcion">Corte fino de res seleccionada</p>
+            <span class="precio">$12.00/kg</span>
+            <button class="btn-beneficios" data-producto="Carne - Res">Ver Beneficios</button>
+        </div>
+
+        <div class="producto-card" data-categoria="embutidos">
+            <img src="../images/jamon.jpg" alt="Jamón Serrano" class="img-producto-img">
+            <h3>Jamón Serrano</h3>
+            <p class="descripcion">Jamón artesanal de excelente calidad</p>
+            <span class="precio">$10.50/kg</span>
+            <button class="btn-beneficios" data-producto="Jamón Serrano">Ver Beneficios</button>
+        </div>
+
+        <div class="producto-card" data-categoria="embutidos">
+            <img src="../images/chorizo.jpg" alt="Chorizo Casero" class="img-producto-img">
+            <h3>Chorizo Casero</h3>
+            <p class="descripcion">Chorizo fresco preparado diariamente</p>
+            <span class="precio">$6.00/kg</span>
+            <button class="btn-beneficios" data-producto="Chorizo Casero">Ver Beneficios</button>
+        </div>
+
+        <div class="producto-card" data-categoria="embutidos">
+            <img src="../images/morcilla.jpg" alt="Morcilla" class="img-producto-img">
+            <h3>Morcilla</h3>
+            <p class="descripcion">Morcilla tradicional de la región</p>
+            <span class="precio">$5.50/kg</span>
+            <button class="btn-beneficios" data-producto="Morcilla">Ver Beneficios</button>
+        </div>
+
+        <div class="producto-card" data-categoria="huevos">
+            <img src="../images/huevos1.jpg" alt="Huevos Frescos - Carton" class="img-producto-img">
+            <h3>Huevos Frescos - Carton</h3>
+            <p class="descripcion">Huevos de granja recién recolectados</p>
+            <span class="precio">$3.50/Carton</span>
+            <button class="btn-beneficios" data-producto="Huevos Frescos - Carton">Ver Beneficios</button>
+        </div>
+
+
+    </section>
+
+    <div id="modal-beneficios" class="modal">
+        <div class="modal-content">
+            <span class="cerrar">&times;</span>
+            <h2 id="modal-titulo">Beneficios</h2>
+            <div id="modal-beneficios-contenido" class="modal-beneficios-list">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Salsamentería Almendra. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp: reemplaza el número por el del dueño (formato internacional, sin + ni guiones) -->
+    <a class="whatsapp-float" href="https://wa.me/521234567890?text=Hola,%20quiero%20más%20información%20sobre%20sus%20productos" target="_blank" rel="noopener" title="Contactar por WhatsApp" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20.52 3.478A11.858 11.858 0 0012.01.004C6.38.004 1.835 4.55 1.835 10.18c0 1.792.47 3.477 1.36 4.99L.25 23.75l8.9-2.33a10.944 10.944 0 005.86 1.48h.01c5.63 0 10.17-4.54 10.17-10.17 0-2.72-1.06-5.27-2.69-7.24zM12.01 20.13h-.01a9.28 9.28 0 01-4.73-1.28l-.34-.2-5.28 1.38 1.42-4.1-.22-.36A9.32 9.32 0 012.96 10.18c0-5.07 4.12-9.18 9.05-9.18 2.42 0 4.69.94 6.4 2.66a8.97 8.97 0 012.64 6.52c0 4.95-4.02 8.96-8.99 8.96z"/>
+            <path d="M17.1 14.02c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.36.22-.66.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.12.3-.32.45-.48.15-.15.2-.26.3-.43.1-.17.05-.33-.02-.48-.07-.15-.68-1.64-.93-2.25-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.33-.27.26-1.03 1.01-1.03 2.46 0 1.44 1.05 2.84 1.2 3.04.15.2 2.08 3.3 5.04 4.63 2.96 1.33 3.16 1.16 3.73 1.09.57-.07 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.43-.06-.13-.23-.2-.52-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Contenedor para notificaciones tipo toast -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
