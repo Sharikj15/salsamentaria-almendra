@@ -154,6 +154,29 @@ header {
     color: #8B0000;
 }
 
+.horarios-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #8B0000;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.horarios-info h3 {
+    color: #8B0000;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.horarios-info p {
+    color: #333;
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;

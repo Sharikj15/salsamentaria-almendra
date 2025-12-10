@@ -1,7 +1,5 @@
 import { beneficiosProductos } from '../js/data.js';
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const btnFiltros = document.querySelectorAll('.btn-filtro');
     const productosCards = document.querySelectorAll('.producto-card');
